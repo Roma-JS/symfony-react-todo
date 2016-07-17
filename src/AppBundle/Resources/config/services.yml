@@ -1,0 +1,7 @@
+services:
+
+  app.book.repo:
+    class:   AppBundle\Repository\TodoRepository
+    factory: ["@doctrine.orm.entity_manager", getRepository]
+    arguments:
+      - 'AppBundle\Entity\Todo'
