@@ -1,0 +1,22 @@
+body {
+    padding-top: 50px;
+}
+
+.navbar-inverse {
+    background-color: #8f001c;
+    border-color: #8f001c;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #ffb200;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #8f001c;
+    color: white;
+}
+
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}

@@ -18,30 +18,30 @@ class TodoRepository extends EntityRepository
     /**
      * Persists todo to database if it doesn't exist in database.
      *
-     * @param Todo $author
+     * @param Todo $todo
      * @return Todo
      */
-    public function persistTodo(Todo $author)
+    public function persistTodo(Todo $todo)
     {
-        if ($author->getId() !== null) {
-            $author = $this->_em->merge($author);
+        if ($todo->getId() !== null) {
+            $todo = $this->_em->merge($todo);
         } else {
-            $this->_em->persist($author);
+            $this->_em->persist($todo);
         }
 
         $this->_em->flush();
 
-        return $author;
+        return $todo;
     }
 
     /**
      * Deletes Todo.
      *
-     * @param Todo $author
+     * @param Todo $todo
      */
-    public function deleteTodo(Todo $author)
+    public function deleteTodo(Todo $todo)
     {
-        $this->_em->remove($author);
+        $this->_em->remove($todo);
         $this->_em->flush();
     }
 }

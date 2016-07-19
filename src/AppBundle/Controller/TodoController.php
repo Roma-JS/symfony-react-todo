@@ -13,9 +13,10 @@ class TodoController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Todo');
+        $todos = $repository->findAll();
+
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
-        ]);
+        return $this->render('AppBundle:Todo:index.html.twig', ['todos' => $todos]);
     }
 }
