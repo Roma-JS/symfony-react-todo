@@ -1,0 +1,4 @@
+rest_bundle_todo:
+    resource: "@RestBundle/Controller/TodoController.php"
+    type: rest
+    name_prefix: api_
