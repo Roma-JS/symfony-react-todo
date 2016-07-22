@@ -123,15 +123,7 @@ class TodoController extends BaseController
     public function postAction(Request $request)
     {
         try {
-            $persistedType = $this->createNewTodo($request);
-
-            $routeOptions = [
-                'id' => $persistedType->getId(),
-                '_format' => $request->get('_format')
-            ];
-
-            return $this->routeRedirectView('api_get_todo', $routeOptions, Response::HTTP_CREATED);
-
+            return $this->createNewTodo($request);
         } catch (InvalidFormException $exception) {
             return $exception->getForm();
         } catch (\Exception $exception) {

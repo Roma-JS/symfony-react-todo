@@ -14,5 +14,8 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/web/assets/vendor/
 /src/AppBundle/Entity/*.php~
+/frontend/bower_components
+/frontend/node_modules
+/frontend/web
+/web/assets
